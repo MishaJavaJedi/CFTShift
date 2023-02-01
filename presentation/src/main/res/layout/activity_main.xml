@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputField" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hintText" />
+
+    <TextView
+        android:id="@+id/schemeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/scheme_network"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkButton" />
+
+    <TextView
+        android:id="@+id/typeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/type"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toEndOf="@id/schemeHint"
+        app:layout_constraintTop_toTopOf="@id/schemeHint" />
+
+    <TextView
+        android:id="@+id/bankHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
+        android:text="@string/bank"
+        android:textColor="@color/hintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/typeHint" />
+
+    <TextView
+        android:id="@+id/schemeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/schemeHint"
+        app:layout_constraintTop_toBottomOf="@id/schemeHint"
+        tools:text="Scheme Data" />
+
+    <TextView
+        android:id="@+id/typeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/typeHint"
+        app:layout_constraintTop_toBottomOf="@id/typeHint"
+        tools:text="Type Data" />
+
+    <TextView
+        android:id="@+id/bankNameData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/bankHint"
+        app:layout_constraintTop_toBottomOf="@id/bankHint"
+        tools:text="Bank Name" />
+
+    <TextView
+        android:id="@+id/bankUrlData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autoLink="web"
+        android:ellipsize="end"
+        android:linksClickable="true"
+        app:layout_constraintStart_toStartOf="@id/bankNameData"
+        app:layout_constraintTop_toBottomOf="@id/bankNameData"
+        tools:text="Bank URL" />
+
+    <TextView
+        android:id="@+id/bankNumberData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autoLink="phone"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/bankUrlData"
+        app:layout_constraintTop_toBottomOf="@id/bankUrlData"
+        tools:text="Bank phone" />
+
+    <TextView
+        android:id="@+id/brandHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/brand"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toStartOf="@id/schemeHint"
+        app:layout_constraintTop_toBottomOf="@id/schemeData" />
+
+    <TextView
+        android:id="@+id/prepaidHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/prepaid"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toStartOf="@id/typeData"
+        app:layout_constraintTop_toBottomOf="@id/typeData" />
+
+    <TextView
+        android:id="@+id/brandData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/brandHint"
+        app:layout_constraintTop_toBottomOf="@id/brandHint"
+        tools:text="BRAND NAME" />
+
+    <TextView
+        android:id="@+id/prepaidData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/prepaidHint"
+        app:layout_constraintTop_toBottomOf="@id/prepaidHint"
+        tools:text="PREPAID DATA" />
+
+    <TextView
+        android:id="@+id/cardNumberHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/card_number"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toStartOf="@id/brandHint"
+        app:layout_constraintTop_toBottomOf="@id/brandData" />
+
+    <TextView
+        android:id="@+id/countryHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/country"
+        android:textColor="@color/hintColor"
+        app:layout_constraintStart_toStartOf="@id/prepaidData"
+        app:layout_constraintTop_toBottomOf="@id/prepaidData" />
+
+    <TextView
+        android:id="@+id/cardDataLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/cardNumberHint"
+        app:layout_constraintTop_toBottomOf="@id/cardNumberHint"
+        tools:text="16" />
+
+    <TextView
+        android:id="@+id/luhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/cardDataLength"
+        app:layout_constraintTop_toBottomOf="@id/cardNumberHint"
+        tools:text="YES\NO" />
+
+    <TextView
+        android:id="@+id/emojiData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/countryHint"
+        app:layout_constraintTop_toBottomOf="@id/countryHint"
+        tools:text="us" />
+
+    <TextView
+        android:id="@+id/countryData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/emojiData"
+        app:layout_constraintTop_toBottomOf="@id/countryHint"
+        tools:text="USA" />
+
+    <TextView
+        android:id="@+id/locationData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/emojiData"
+        app:layout_constraintTop_toBottomOf="@id/emojiData"
+        tools:text="(latitude: 38, longitude: -97)" />
+
+    <TextView
+        android:id="@+id/searchHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/search_history"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationData" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchHistory"
+        tools:listitem="@layout/search_history_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

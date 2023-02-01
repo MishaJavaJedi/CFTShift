@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CFT Shift</string>
+    <string name="empty_response_exception">Кажется такой карты нет в базе!</string>
+    <string name="not_successful">Что-то пошло не так :( Попробуйте еще раз.</string>
+    <string name="hint">Enter the first digits of a card number (BIN/IIN)</string>
+    <string name="null_toast_message">Необходимо ввести номер карты</string>
+    <string name="network_exception">Проверьте соединение с интернетом</string>
+    <string name="card_number">CARD NUMBER</string>
+    <string name="country">COUNTRY</string>
+    <string name="search_history">Search history</string>
+    <string name="prepaid">PREPAID</string>
+    <string name="brand">BRAND</string>
+    <string name="bank">BANK</string>
+    <string name="type">TYPE</string>
+    <string name="scheme_network">SCHEME / NETWORK</string>
+</resources>
